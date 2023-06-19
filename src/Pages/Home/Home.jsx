@@ -7,14 +7,14 @@ import TopPicksProduct from "./TopPicksProduct";
 
 const Home = () => {
   return (
-    <>
+    <div className="px-8">
       <Banner />
       <ProductHighlight />
       <TopPicksProduct />
       <Brands />
       <Blog />
       <Info />
-    </>
+    </div>
   );
 };
 

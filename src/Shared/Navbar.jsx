@@ -5,7 +5,7 @@ import { BsPerson } from "react-icons/bs";
 
 const Navbar = () => {
   return (
-    <div className="navbar navbar_style bg-base-100">
+    <div className="navbar navbar_style sticky top-0 z-10">
       <div className="navbar-start">
         {/* Dropdown menu start */}
         <div className="dropdown">

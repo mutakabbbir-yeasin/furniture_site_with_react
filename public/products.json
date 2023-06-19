@@ -1,0 +1,297 @@
+[
+  {
+    "product_name": "Modern Sofa",
+    "brand_name": "Furniture Co.",
+    "categories": ["Living Room", "Sofas"],
+    "tags": ["modern", "comfortable", "upholstered"],
+    "short_description": "A stylish and comfortable sofa for your living room.",
+    "brief_description": "The Modern Sofa is designed with a sleek and contemporary style, providing both comfort and aesthetic appeal. Its high-quality upholstery and cushioning ensure a cozy seating experience.",
+    "available": 100,
+    "reference": "MODSOF001",
+    "images_link": [
+      "https://cdn.shopify.com/s/files/1/0603/7232/0427/files/rev_home5.png?v=1642733898",
+      "https://cdn.shopify.com/s/files/1/0603/7232/0427/files/h2_banner-1.jpg?v=1642815204"
+    ],
+    "dimensions": {
+      "width": 72,
+      "height": 32,
+      "depth": 36
+    }
+  },
+  {
+    "product_name": "Wooden Dining Table",
+    "brand_name": "Home Furnishings",
+    "categories": ["Dining Room", "Tables"],
+    "tags": ["wooden", "rustic", "dining"],
+    "short_description": "A sturdy wooden dining table for family gatherings.",
+    "brief_description": "The Wooden Dining Table is crafted from solid wood, giving it a rustic and natural look. Its spacious surface provides ample room for meals and gatherings with family and friends.",
+    "available": 56,
+    "reference": "WOODTAB002",
+    "images_link": [
+      "https://rubiktheme.com/demo/rb_kosi_demo/47-home_default/today-is-a-good-day-framed-poster.jpg",
+      "https://rubiktheme.com/demo/rb_kosi_demo/modules/rbthemeblog/covers/6-thumb.jpg"
+    ],
+    "dimensions": {
+      "width": 84,
+      "height": 30,
+      "depth": 42
+    }
+  },
+  {
+    "product_name": "Leather Armchair",
+    "brand_name": "Luxury Living",
+    "categories": ["Living Room", "Armchairs"],
+    "tags": ["leather", "classic", "comfort"],
+    "short_description": "A luxurious leather armchair for ultimate comfort.",
+    "brief_description": "The Leather Armchair is designed with premium leather upholstery and a classic silhouette, offering a perfect blend of elegance and comfort. Its plush cushioning and wide armrests provide a cozy seating experience.",
+    "available": 23,
+    "reference": "LEATHARM003",
+    "images_link": [
+      "https://rubiktheme.com/demo/rb_kosi_demo/modules/rbthemeblog/covers/8-thumb.jpg",
+      "https://rubiktheme.com/demo/rb_kosi_demo/37-home_default/the-best-is-yet-to-come-framed-poster.jpg"
+    ],
+    "dimensions": {
+      "width": 40,
+      "height": 38,
+      "depth": 36
+    }
+  },
+  {
+    "product_name": "Wooden Bed Frame",
+    "brand_name": "SleepWell",
+    "categories": ["Bedroom", "Bed Frames"],
+    "tags": ["wooden", "modern", "durable"],
+    "short_description": "A sturdy wooden bed frame for a restful sleep.",
+    "brief_description": "The Wooden Bed Frame is crafted from high-quality wood, providing durability and a modern aesthetic to your bedroom. Its sturdy construction ensures stability and support for a restful sleep.",
+    "available": 35,
+    "reference": "WOODBED004",
+    "images_link": [
+      "https://stylesatlife.com/wp-content/uploads/2019/03/furniture-bed-designs.jpg",
+      "https://rubiktheme.com/demo/rb_kosi_demo/46-home_default/today-is-a-good-day-framed-poster.jpg"
+    ],
+    "dimensions": {
+      "width": 78,
+      "height": 54,
+      "depth": 80
+    }
+  },
+  {
+    "product_name": "Glass Coffee Table",
+    "brand_name": "Elegant Decor",
+    "categories": ["Living Room", "Coffee Tables"],
+    "tags": ["glass", "modern", "sleek"],
+    "short_description": "A sleek and modern glass coffee table for your living room.",
+    "brief_description": "The Glass Coffee Table features a tempered glass top and a minimalist design, adding a touch of elegance to your living space. Its sturdy metal frame provides stability and style.",
+    "available": 23,
+    "reference": "GLASSCOF005",
+    "images_link": [
+      "https://rubiktheme.com/demo/rb_kosi_demo/46-home_default/today-is-a-good-day-framed-poster.jpg",
+      "https://rubiktheme.com/demo/rb_kosi_demo/47-home_default/today-is-a-good-day-framed-poster.jpg"
+    ],
+    "dimensions": {
+      "width": 48,
+      "height": 18,
+      "depth": 24
+    }
+  },
+  {
+    "product_name": "Fabric Dining Chairs",
+    "brand_name": "Home Essentials",
+    "categories": ["Dining Room", "Chairs"],
+    "tags": ["fabric", "comfortable", "modern"],
+    "short_description": "Comfortable fabric dining chairs for your dining room.",
+    "brief_description": "The Fabric Dining Chairs feature soft and durable upholstery, providing a comfortable seating experience for your dining area. With their modern design, they effortlessly complement various dining table styles.",
+    "available": 0,
+    "reference": "FABDINCHAIR006",
+    "images_link": [
+      "https://rubiktheme.com/demo/rb_kosi_demo/31-home_default/brown-bear-printed-sweater.jpg",
+      "https://rubiktheme.com/demo/rb_kosi_demo/modules/rbthemeblog/covers/8-thumb.jpg"
+    ],
+    "dimensions": {
+      "width": 20,
+      "height": 36,
+      "depth": 22
+    }
+  },
+  {
+    "product_name": "Bookshelf",
+    "brand_name": "Organize It",
+    "categories": ["Living Room", "Storage"],
+    "tags": ["bookshelf", "storage", "modern"],
+    "short_description": "A modern bookshelf for organizing your living space.",
+    "brief_description": "The Bookshelf offers ample storage space for your books, decor, and more. With its sleek and modern design, it adds both functionality and style to your living room or home office.",
+    "available": 34,
+    "reference": "BOOKSHELF007",
+    "images_link": [
+      "https://rubiktheme.com/demo/rb_kosi_demo/63-home_default/mug-today-is-a-good-day.jpg",
+      "https://i.ytimg.com/vi/X6AiHD9lZHg/maxresdefault.jpg",
+      "https://images.unsplash.com/photo-1543248939-4296e1fea89b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Ym9va2Nhc2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+    ],
+    "dimensions": {
+      "width": 32,
+      "height": 72,
+      "depth": 12
+    }
+  },
+  {
+    "product_name": "Leather Recliner",
+    "brand_name": "Relaxation Zone",
+    "categories": ["Living Room", "Recliners"],
+    "tags": ["leather", "recliner", "comfort"],
+    "short_description": "A comfortable leather recliner for ultimate relaxation.",
+    "brief_description": "The Leather Recliner features luxurious leather upholstery and a reclining mechanism, providing exceptional comfort and support. Whether you're reading, watching TV, or simply unwinding, this recliner ensures a relaxing experience.",
+    "available": 23,
+    "reference": "LEATHRECL008",
+    "images_link": [
+      "https://c1.wallpaperflare.com/preview/648/925/217/leather-sofa-recliner-sofa-furniture-lounge-suite.jpg",
+      "https://www.furniturechoice.co.uk/p/m/RS10000383/RS10000383_01.jpg",
+      "https://www.just4sofas.co.uk/wp-content/uploads/product-lifestyle-winchester.jpg"
+    ],
+    "dimensions": {
+      "width": 36,
+      "height": 40,
+      "depth": 38
+    }
+  },
+  {
+    "product_name": "Modern Desk",
+    "brand_name": "Workspace Solutions",
+    "categories": ["Home Office", "Desks"],
+    "tags": ["modern", "workspace", "functional"],
+    "short_description": "A modern and functional desk for your home office.",
+    "brief_description": "The Modern Desk offers a spacious work surface and convenient storage options, making it ideal for your home office or study. Its sleek design and sturdy construction enhance productivity and style.",
+    "available": 0,
+    "reference": "MODDESK009",
+    "images_link": [
+      "https://c4.wallpaperflare.com/wallpaper/883/808/834/office-desks-computers-style-wallpaper-preview.jpg",
+      "https://e1.pxfuel.com/desktop-wallpaper/1023/869/desktop-wallpaper-modern-office-office-interior.jpg",
+      "https://e0.pxfuel.com/wallpapers/898/956/desktop-wallpaper-office-office-fun-modern-office.jpg"
+    ],
+    "dimensions": {
+      "width": 60,
+      "height": 30,
+      "depth": 24
+    }
+  },
+  {
+    "product_name": "Upholstered Bed",
+    "brand_name": "Dream Haven",
+    "categories": ["Bedroom", "Beds"],
+    "tags": ["upholstered", "modern", "comfortable"],
+    "short_description": "An upholstered bed with a modern design for a cozy sleep.",
+    "brief_description": "The Upholstered Bed combines style and comfort with its plush upholstered headboard and sleek frame. Its contemporary design adds a touch of sophistication to your bedroom while providing a comfortable sleep experience.",
+    "available": 34,
+    "reference": "UPHBED010",
+    "images_link": [
+      "https://www.bodema.it/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/b/o/bodema-dallas-01_1.jpg",
+      "https://www.bodema.it/media/catalog/product/cache/4/small_image/17f82f742ffe127f42dca9de82fb58b1/b/o/bodema-sophie-01.jpg",
+      "https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg"
+    ],
+    "dimensions": {
+      "width": 78,
+      "height": 48,
+      "depth": 84
+    }
+  },
+  {
+    "product_name": "Outdoor Dining Set",
+    "brand_name": "Patio Paradise",
+    "categories": ["Outdoor", "Dining Sets"],
+    "tags": ["outdoor", "patio", "dining"],
+    "short_description": "A stylish outdoor dining set for your patio or garden.",
+    "brief_description": "The Outdoor Dining Set features a durable and weather-resistant construction, making it perfect for outdoor gatherings and meals. Its contemporary design and comfortable seating create an inviting atmosphere.",
+    "available": 20,
+    "reference": "OUTDOORDINSET011",
+    "images_link": [
+      "https://cdn.shopify.com/s/files/1/1149/0820/collections/banner-top1-min_88cdbee2-13dc-4b8b-af2a-e634884bb230.jpg?v=1566911991",
+      "https://cdn.vox-cdn.com/thumbor/FDj1YXy_1Ofc3ik__tkUd8A3k3Q=/0x0:1390x1076/1200x800/filters:focal(584x427:806x649)/cdn.vox-cdn.com/uploads/chorus_image/image/63721419/GUEST_986e7fc5_d3b6_440f_a550_40dd31e27b0c.7.jpeg",
+      "https://media.polywood.com/media/catalog/category/Dining_Sets.jpg",
+      "https://cdn.thewirecutter.com/wp-content/media/2022/05/patio-furniture-2048px-80508.jpg?auto=webp&quality=75&width=1024"
+    ],
+    "dimensions": {
+      "width": 72,
+      "height": 30,
+      "depth": 36
+    }
+  },
+  {
+    "product_name": "Swivel Bar Stools",
+    "brand_name": "Bar Time",
+    "categories": ["Kitchen", "Bar Stools"],
+    "tags": ["swivel", "bar stools", "modern"],
+    "short_description": "Swivel bar stools for your kitchen or bar area.",
+    "brief_description": "The Swivel Bar Stools feature a modern design and a comfortable seat with 360-degree swivel functionality. With their sleek look and adjustable height, they provide both style and functionality to your kitchen or bar area.",
+    "available": 0,
+    "reference": "SWIVELBARSTOOL012",
+    "images_link": [
+      "https://i5.walmartimages.com/asr/72deac6c-8bbc-43b4-be91-8e3cb088c2bf.0980f17f9aa960f48a29abbc9aeff177.jpeg",
+      "https://m.media-amazon.com/images/I/71BwetiPMEL._AC_UF894,1000_QL80_.jpg",
+      "https://m.media-amazon.com/images/I/71IjvyEQWGL.jpg"
+    ],
+    "dimensions": {
+      "width": 18,
+      "height": 40,
+      "depth": 18
+    }
+  },
+  {
+    "product_name": "Convertible Sofa Bed",
+    "brand_name": "Multi-Functional Furniture",
+    "categories": ["Living Room", "Sofa Beds"],
+    "tags": ["convertible", "sofa bed", "space-saving"],
+    "short_description": "A versatile convertible sofa bed for small spaces.",
+    "brief_description": "The Convertible Sofa Bed offers a comfortable seating option during the day and easily transforms into a cozy bed for overnight guests. Its space-saving design and modern style make it a practical addition to small living spaces.",
+    "available": 90,
+    "reference": "CONVSOFA013",
+    "images_link": [
+      "https://cdn.mos.cms.futurecdn.net/u42WSS9s26owdpoJ6gzp8J.jpg",
+      "https://www.bodema.it/media/catalog/product/cache/4/small_image/17f82f742ffe127f42dca9de82fb58b1/b/o/bodema-divano-letto-dilbar-00.jpg",
+      "https://homeofcozy.com/wp-content/uploads/2020/09/iStock-1133045032-1024x683.jpg"
+    ],
+    "dimensions": {
+      "width": 72,
+      "height": 36,
+      "depth": 32
+    }
+  },
+  {
+    "product_name": "Rustic Sideboard",
+    "brand_name": "Country Charm",
+    "categories": ["Dining Room", "Sideboards"],
+    "tags": ["rustic", "storage", "dining room"],
+    "short_description": "A rustic sideboard for storage and display in your dining room.",
+    "brief_description": "The Rustic Sideboard combines style and functionality with its ample storage space and charming design. Whether you use it to store dinnerware or showcase decor, it adds a touch of country charm to your dining room.",
+    "available": 102,
+    "reference": "RUSTICSIDE014",
+    "images_link": [
+      "https://www.crownfrenchfurniture.co.uk/media/catalog/product/cache/c4bd1bc8500737490283d23e71176426/l/a/large_french_rustic_sideboard.jpg",
+      "https://d2j6dbq0eux0bg.cloudfront.net/images/18024428/3056647862.jpg",
+      "https://cdn.shopify.com/s/files/1/0223/2583/files/eastwood_rustic_oak_large_sideboard_banner_image.jpg?v=1643897227"
+    ],
+    "dimensions": {
+      "width": 60,
+      "height": 36,
+      "depth": 18
+    }
+  },
+  {
+    "product_name": "Mid-Century Armchair",
+    "brand_name": "Retro Vibes",
+    "categories": ["Living Room", "Armchairs"],
+    "tags": ["mid-century", "retro", "comfortable"],
+    "short_description": "A comfortable mid-century armchair with retro vibes.",
+    "brief_description": "The Mid-Century Armchair features a timeless mid-century design with its clean lines and tapered legs. Its comfortable cushioning and stylish upholstery create a cozy and inviting seating option for your living room.",
+    "available": 89,
+    "reference": "MIDARMCHAIR015",
+    "images_link": [
+      "https://happyhome.clinic/wp-content/uploads/2017/05/The-perfect-mid-century-armchair-for-small-rooms.jpg",
+      "https://rubiktheme.com/demo/rb_kosi_demo/30-home_default/brown-bear-printed-sweater.jpg",
+      "https://m.media-amazon.com/images/I/71dJFq-L7WL._AC_UF894,1000_QL80_.jpg"
+    ],
+    "dimensions": {
+      "width": 30,
+      "height": 34,
+      "depth": 32
+    }
+  }
+]

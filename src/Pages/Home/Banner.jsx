@@ -6,7 +6,7 @@ import slider3 from "../../assets/banner/banner-3.gif";
 
 const Banner = () => {
   return (
-    <Carousel>
+    <Carousel className="z-0 ">
       <div>
         <img src={slider1} />
       </div>
