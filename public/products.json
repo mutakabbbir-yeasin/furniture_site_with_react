@@ -1,5 +1,6 @@
 [
   {
+    "_id": 1,
     "product_name": "Modern Sofa",
     "brand_name": "Furniture Co.",
     "categories": ["Living Room", "Sofas"],
@@ -8,6 +9,7 @@
     "brief_description": "The Modern Sofa is designed with a sleek and contemporary style, providing both comfort and aesthetic appeal. Its high-quality upholstery and cushioning ensure a cozy seating experience.",
     "available": 100,
     "reference": "MODSOF001",
+    "price": 200,
     "images_link": [
       "https://cdn.shopify.com/s/files/1/0603/7232/0427/files/rev_home5.png?v=1642733898",
       "https://cdn.shopify.com/s/files/1/0603/7232/0427/files/h2_banner-1.jpg?v=1642815204"
@@ -19,6 +21,7 @@
     }
   },
   {
+    "_id": 2,
     "product_name": "Wooden Dining Table",
     "brand_name": "Home Furnishings",
     "categories": ["Dining Room", "Tables"],
@@ -27,6 +30,7 @@
     "brief_description": "The Wooden Dining Table is crafted from solid wood, giving it a rustic and natural look. Its spacious surface provides ample room for meals and gatherings with family and friends.",
     "available": 56,
     "reference": "WOODTAB002",
+    "price": 300,
     "images_link": [
       "https://rubiktheme.com/demo/rb_kosi_demo/47-home_default/today-is-a-good-day-framed-poster.jpg",
       "https://rubiktheme.com/demo/rb_kosi_demo/modules/rbthemeblog/covers/6-thumb.jpg"
@@ -38,6 +42,7 @@
     }
   },
   {
+    "_id": 3,
     "product_name": "Leather Armchair",
     "brand_name": "Luxury Living",
     "categories": ["Living Room", "Armchairs"],
@@ -46,6 +51,7 @@
     "brief_description": "The Leather Armchair is designed with premium leather upholstery and a classic silhouette, offering a perfect blend of elegance and comfort. Its plush cushioning and wide armrests provide a cozy seating experience.",
     "available": 23,
     "reference": "LEATHARM003",
+    "price": 250,
     "images_link": [
       "https://rubiktheme.com/demo/rb_kosi_demo/modules/rbthemeblog/covers/8-thumb.jpg",
       "https://rubiktheme.com/demo/rb_kosi_demo/37-home_default/the-best-is-yet-to-come-framed-poster.jpg"
@@ -57,6 +63,7 @@
     }
   },
   {
+    "_id": 4,
     "product_name": "Wooden Bed Frame",
     "brand_name": "SleepWell",
     "categories": ["Bedroom", "Bed Frames"],
@@ -65,6 +72,7 @@
     "brief_description": "The Wooden Bed Frame is crafted from high-quality wood, providing durability and a modern aesthetic to your bedroom. Its sturdy construction ensures stability and support for a restful sleep.",
     "available": 35,
     "reference": "WOODBED004",
+    "price": 100,
     "images_link": [
       "https://stylesatlife.com/wp-content/uploads/2019/03/furniture-bed-designs.jpg",
       "https://rubiktheme.com/demo/rb_kosi_demo/46-home_default/today-is-a-good-day-framed-poster.jpg"
@@ -76,6 +84,7 @@
     }
   },
   {
+    "_id": 5,
     "product_name": "Glass Coffee Table",
     "brand_name": "Elegant Decor",
     "categories": ["Living Room", "Coffee Tables"],
@@ -84,6 +93,7 @@
     "brief_description": "The Glass Coffee Table features a tempered glass top and a minimalist design, adding a touch of elegance to your living space. Its sturdy metal frame provides stability and style.",
     "available": 23,
     "reference": "GLASSCOF005",
+    "price": 400,
     "images_link": [
       "https://rubiktheme.com/demo/rb_kosi_demo/46-home_default/today-is-a-good-day-framed-poster.jpg",
       "https://rubiktheme.com/demo/rb_kosi_demo/47-home_default/today-is-a-good-day-framed-poster.jpg"
@@ -95,6 +105,7 @@
     }
   },
   {
+    "_id": 6,
     "product_name": "Fabric Dining Chairs",
     "brand_name": "Home Essentials",
     "categories": ["Dining Room", "Chairs"],
@@ -103,6 +114,7 @@
     "brief_description": "The Fabric Dining Chairs feature soft and durable upholstery, providing a comfortable seating experience for your dining area. With their modern design, they effortlessly complement various dining table styles.",
     "available": 0,
     "reference": "FABDINCHAIR006",
+    "price": 280,
     "images_link": [
       "https://rubiktheme.com/demo/rb_kosi_demo/31-home_default/brown-bear-printed-sweater.jpg",
       "https://rubiktheme.com/demo/rb_kosi_demo/modules/rbthemeblog/covers/8-thumb.jpg"
@@ -114,6 +126,7 @@
     }
   },
   {
+    "_id": 7,
     "product_name": "Bookshelf",
     "brand_name": "Organize It",
     "categories": ["Living Room", "Storage"],
@@ -122,6 +135,7 @@
     "brief_description": "The Bookshelf offers ample storage space for your books, decor, and more. With its sleek and modern design, it adds both functionality and style to your living room or home office.",
     "available": 34,
     "reference": "BOOKSHELF007",
+    "price": 460,
     "images_link": [
       "https://rubiktheme.com/demo/rb_kosi_demo/63-home_default/mug-today-is-a-good-day.jpg",
       "https://i.ytimg.com/vi/X6AiHD9lZHg/maxresdefault.jpg",
@@ -134,6 +148,7 @@
     }
   },
   {
+    "_id": 8,
     "product_name": "Leather Recliner",
     "brand_name": "Relaxation Zone",
     "categories": ["Living Room", "Recliners"],
@@ -142,6 +157,7 @@
     "brief_description": "The Leather Recliner features luxurious leather upholstery and a reclining mechanism, providing exceptional comfort and support. Whether you're reading, watching TV, or simply unwinding, this recliner ensures a relaxing experience.",
     "available": 23,
     "reference": "LEATHRECL008",
+    "price": 270,
     "images_link": [
       "https://c1.wallpaperflare.com/preview/648/925/217/leather-sofa-recliner-sofa-furniture-lounge-suite.jpg",
       "https://www.furniturechoice.co.uk/p/m/RS10000383/RS10000383_01.jpg",
@@ -154,6 +170,7 @@
     }
   },
   {
+    "_id": 9,
     "product_name": "Modern Desk",
     "brand_name": "Workspace Solutions",
     "categories": ["Home Office", "Desks"],
@@ -162,6 +179,7 @@
     "brief_description": "The Modern Desk offers a spacious work surface and convenient storage options, making it ideal for your home office or study. Its sleek design and sturdy construction enhance productivity and style.",
     "available": 0,
     "reference": "MODDESK009",
+    "price": 100,
     "images_link": [
       "https://c4.wallpaperflare.com/wallpaper/883/808/834/office-desks-computers-style-wallpaper-preview.jpg",
       "https://e1.pxfuel.com/desktop-wallpaper/1023/869/desktop-wallpaper-modern-office-office-interior.jpg",
@@ -174,6 +192,7 @@
     }
   },
   {
+    "_id": 10,
     "product_name": "Upholstered Bed",
     "brand_name": "Dream Haven",
     "categories": ["Bedroom", "Beds"],
@@ -182,6 +201,7 @@
     "brief_description": "The Upholstered Bed combines style and comfort with its plush upholstered headboard and sleek frame. Its contemporary design adds a touch of sophistication to your bedroom while providing a comfortable sleep experience.",
     "available": 34,
     "reference": "UPHBED010",
+    "price": 1000,
     "images_link": [
       "https://www.bodema.it/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/b/o/bodema-dallas-01_1.jpg",
       "https://www.bodema.it/media/catalog/product/cache/4/small_image/17f82f742ffe127f42dca9de82fb58b1/b/o/bodema-sophie-01.jpg",
@@ -194,6 +214,7 @@
     }
   },
   {
+    "_id": 11,
     "product_name": "Outdoor Dining Set",
     "brand_name": "Patio Paradise",
     "categories": ["Outdoor", "Dining Sets"],
@@ -202,6 +223,7 @@
     "brief_description": "The Outdoor Dining Set features a durable and weather-resistant construction, making it perfect for outdoor gatherings and meals. Its contemporary design and comfortable seating create an inviting atmosphere.",
     "available": 20,
     "reference": "OUTDOORDINSET011",
+    "price": 500,
     "images_link": [
       "https://cdn.shopify.com/s/files/1/1149/0820/collections/banner-top1-min_88cdbee2-13dc-4b8b-af2a-e634884bb230.jpg?v=1566911991",
       "https://cdn.vox-cdn.com/thumbor/FDj1YXy_1Ofc3ik__tkUd8A3k3Q=/0x0:1390x1076/1200x800/filters:focal(584x427:806x649)/cdn.vox-cdn.com/uploads/chorus_image/image/63721419/GUEST_986e7fc5_d3b6_440f_a550_40dd31e27b0c.7.jpeg",
@@ -215,6 +237,7 @@
     }
   },
   {
+    "_id": 12,
     "product_name": "Swivel Bar Stools",
     "brand_name": "Bar Time",
     "categories": ["Kitchen", "Bar Stools"],
@@ -223,6 +246,7 @@
     "brief_description": "The Swivel Bar Stools feature a modern design and a comfortable seat with 360-degree swivel functionality. With their sleek look and adjustable height, they provide both style and functionality to your kitchen or bar area.",
     "available": 0,
     "reference": "SWIVELBARSTOOL012",
+    "price": 300,
     "images_link": [
       "https://i5.walmartimages.com/asr/72deac6c-8bbc-43b4-be91-8e3cb088c2bf.0980f17f9aa960f48a29abbc9aeff177.jpeg",
       "https://m.media-amazon.com/images/I/71BwetiPMEL._AC_UF894,1000_QL80_.jpg",
@@ -235,6 +259,7 @@
     }
   },
   {
+    "_id": 13,
     "product_name": "Convertible Sofa Bed",
     "brand_name": "Multi-Functional Furniture",
     "categories": ["Living Room", "Sofa Beds"],
@@ -243,6 +268,7 @@
     "brief_description": "The Convertible Sofa Bed offers a comfortable seating option during the day and easily transforms into a cozy bed for overnight guests. Its space-saving design and modern style make it a practical addition to small living spaces.",
     "available": 90,
     "reference": "CONVSOFA013",
+    "price": 1200,
     "images_link": [
       "https://cdn.mos.cms.futurecdn.net/u42WSS9s26owdpoJ6gzp8J.jpg",
       "https://www.bodema.it/media/catalog/product/cache/4/small_image/17f82f742ffe127f42dca9de82fb58b1/b/o/bodema-divano-letto-dilbar-00.jpg",
@@ -255,6 +281,7 @@
     }
   },
   {
+    "_id": 14,
     "product_name": "Rustic Sideboard",
     "brand_name": "Country Charm",
     "categories": ["Dining Room", "Sideboards"],
@@ -263,6 +290,7 @@
     "brief_description": "The Rustic Sideboard combines style and functionality with its ample storage space and charming design. Whether you use it to store dinnerware or showcase decor, it adds a touch of country charm to your dining room.",
     "available": 102,
     "reference": "RUSTICSIDE014",
+    "price": 400,
     "images_link": [
       "https://www.crownfrenchfurniture.co.uk/media/catalog/product/cache/c4bd1bc8500737490283d23e71176426/l/a/large_french_rustic_sideboard.jpg",
       "https://d2j6dbq0eux0bg.cloudfront.net/images/18024428/3056647862.jpg",
@@ -275,6 +303,7 @@
     }
   },
   {
+    "_id": 15,
     "product_name": "Mid-Century Armchair",
     "brand_name": "Retro Vibes",
     "categories": ["Living Room", "Armchairs"],
@@ -283,6 +312,7 @@
     "brief_description": "The Mid-Century Armchair features a timeless mid-century design with its clean lines and tapered legs. Its comfortable cushioning and stylish upholstery create a cozy and inviting seating option for your living room.",
     "available": 89,
     "reference": "MIDARMCHAIR015",
+    "price": 120,
     "images_link": [
       "https://happyhome.clinic/wp-content/uploads/2017/05/The-perfect-mid-century-armchair-for-small-rooms.jpg",
       "https://rubiktheme.com/demo/rb_kosi_demo/30-home_default/brown-bear-printed-sweater.jpg",
