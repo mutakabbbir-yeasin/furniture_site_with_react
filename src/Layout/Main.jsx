@@ -1,15 +1,19 @@
-import { Outlet } from "react-router-dom";
-import Footer from "../Shared/Footer";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Shared/Navbar";
-import Contact from "../Shared/Contact";
+import Info from "../Pages/Home/Info";
+import "../index.css";
+import HomeFooter from "../Shared/HomeFooter";
+import OtherFooter from "../Shared/OtherFooter";
 
 const Main = () => {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <>
       <Navbar />
       <Outlet />
-      <Contact />
-      <Footer />
+      <Info />
+      {location.pathname === "/" ? <HomeFooter /> : <OtherFooter />}
     </>
   );
 };

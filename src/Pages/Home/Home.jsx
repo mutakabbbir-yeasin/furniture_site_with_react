@@ -1,7 +1,7 @@
+import { useLocation } from "react-router-dom";
 import Blog from "../Blog/Blog";
 import Banner from "./Banner";
 import Brands from "./Brands";
-import Info from "./Info";
 import ProductHighlight from "./ProductHighlight";
 import TopPicksProduct from "./TopPicksProduct";
 
@@ -13,7 +13,6 @@ const Home = () => {
       <TopPicksProduct />
       <Brands />
       <Blog />
-      <Info />
     </div>
   );
 };

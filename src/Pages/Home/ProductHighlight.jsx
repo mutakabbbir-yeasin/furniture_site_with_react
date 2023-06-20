@@ -7,15 +7,16 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 
 AOS.init({
   offset: 300, // offset (in px) from the original trigger point
-  // delay: 1000, // values from 0 to 3000, with step 50ms
+  delay: 500, // values from 0 to 3000, with step 50ms
   duration: 1000,
 });
 
 const ProductHighlight = () => {
   return (
     <div
-      className="flex items-center justify-center my-20 animate-slide-up delay-200"
+      className="flex items-center justify-center my-20 "
       data-aos="slide-up"
+      data-aos-delay="500"
       data-aos-offset="200"
       data-aos-duration="1000"
     >
