@@ -1,0 +1,29 @@
+
+How to convert a json file to API link:
+
+Checkout this link: https://app.json-generator.com/
+
+Steps to follow:
+
+1. signup with your email id
+2. copy your db.json data and paste into generate data section
+3. click on generate data button, this will generate your data
+4. click on get data and copy url e.g:https://api.json-5. generator.com/templates/cq7jZIauJXPO/data
+6. go to the login dropdown and click on access token and generate token
+7. copy the token and keep in your notepad
+8. add ?access_token=PASTE_YOUR_GENERATED_TOKEN
+9. like this: https://api.json-generator.com/templates/cq7jZIauJXPO/data?access_token=PASTE_YOUR_GENERATED_TOKEN
+
+Done
+
+
+
+url: https://api.json-generator.com/templates/wpdVwhRGKHF0/data
+
+token: xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke
+
+add (?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke) next to the url
+
+
+
+final link: https://api.json-generator.com/templates/wpdVwhRGKHF0/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke

@@ -10,13 +10,14 @@ AOS.init({
   delay: 500, // values from 0 to 3000, with step 50ms
   duration: 1000,
 });
+
 const Info = () => {
   return (
     <div
-      className="  justify-center mt-16 "
+      className="flex items-center justify-center my-16 "
       data-aos="slide-up"
       data-aos-delay="500"
-      data-aos-offset="200"
+      data-aos-offset="300"
       data-aos-duration="1000"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 info p-10">

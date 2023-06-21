@@ -2,22 +2,20 @@ import img1 from "../../assets/ProductHighlight/h2_banner-1.jpg";
 import img2 from "../../assets/ProductHighlight/h2_banner-2.jpg";
 import img3 from "../../assets/ProductHighlight/h2_banner-3.jpg";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 
 AOS.init({
   offset: 300, // offset (in px) from the original trigger point
-  delay: 500, // values from 0 to 3000, with step 50ms
+  // delay: 100, // values from 0 to 3000, with step 50ms
   duration: 1000,
 });
-
 const ProductHighlight = () => {
   return (
     <div
-      className="flex items-center justify-center my-20 "
+      className="my-16 "
       data-aos="slide-up"
-      data-aos-delay="500"
-      data-aos-offset="200"
+      // data-aos-delay="100"
+      data-aos-offset="300"
       data-aos-duration="1000"
     >
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">

@@ -19,7 +19,7 @@ const Card = ({ product }) => {
         />
         {/* hover icons (add to cart, add to wishlist, show details) */}
         {isHovered && (
-          <div className="absolute flex -my-16 ms-16 gap-3 ">
+          <div className="absolute flex -my-16 ps-24 gap-3 ">
             <div className="bg-slate-200 p-3 rounded-lg">
               <Link to="/">
                 <AiOutlineShoppingCart className="w-6 h-6" />

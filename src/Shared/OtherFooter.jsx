@@ -1,10 +1,9 @@
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
 import { AiOutlineGooglePlus, AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF, FaPinterest } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/AllPics/logo.jpg";
-
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 
 AOS.init({
@@ -12,13 +11,14 @@ AOS.init({
   delay: 500, // values from 0 to 3000, with step 50ms
   duration: 1000,
 });
+
 const OtherFooter = () => {
   return (
     <div
-      className="  justify-center mt-16 "
+      className="flex items-center justify-center my-16 "
       data-aos="slide-up"
       data-aos-delay="500"
-      data-aos-offset="200"
+      data-aos-offset="300"
       data-aos-duration="1000"
     >
       <div>

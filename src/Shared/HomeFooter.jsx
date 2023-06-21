@@ -16,10 +16,10 @@ const HomeFooter = () => {
   return (
     <>
       <div
-        className="  justify-center mt-16 "
+        className="flex items-center justify-center my-16 "
         data-aos="slide-up"
         data-aos-delay="500"
-        data-aos-offset="200"
+        data-aos-offset="300"
         data-aos-duration="1000"
       >
         <div>
