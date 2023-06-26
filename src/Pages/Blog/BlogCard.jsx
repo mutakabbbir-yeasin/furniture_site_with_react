@@ -5,7 +5,6 @@ import { MdOutlineCategory } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog }) => {
-  console.log(typeof blog);
   const {
     title,
     author_name,
@@ -63,7 +62,8 @@ const BlogCard = ({ blog }) => {
             <p className="-mt-1">{date}</p>
           </div>
           <div>
-            <Link to="/" className="btn btn-neutral ">
+            {/* to={`/blog/${id}`} */}
+            <Link className="btn btn-neutral ">
               Read more
               <BsArrowRight />
             </Link>

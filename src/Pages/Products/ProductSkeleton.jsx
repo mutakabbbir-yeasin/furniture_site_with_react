@@ -1,7 +1,7 @@
 const ProductSkeleton = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-16">
-      {[...Array(9)].map((_, index) => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-16 p-8">
+      {[...Array(12)].map((_, index) => (
         <div key={index} className="bg-gray-200 p-4 rounded">
           <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
             <div className="animate-pulse flex space-x-4">

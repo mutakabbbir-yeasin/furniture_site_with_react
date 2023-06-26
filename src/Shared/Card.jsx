@@ -4,19 +4,22 @@ import { GrView } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
 const Card = ({ product }) => {
-  const { images_link, product_name, short_description, price } = product;
+  const { _id, images_link, product_name, short_description, price } = product;
+  // console.log(_id);
   const [isHovered, setIsHovered] = useState(false);
   const handleHover = () => {
     setIsHovered(true);
   };
   return (
-    <div className="bg-white mx-auto rounded-lg shadow-md overflow-hidden w-96 h-96">
+    <div className="bg-white mx-auto rounded-lg shadow-md overflow-hidden w-[400px] h-[400px]">
       <div onMouseOver={handleHover} onMouseOut={() => setIsHovered(false)}>
-        <img
-          src={images_link[0]}
-          alt="Card Image"
-          className="w-full h-64 object-cover"
-        />
+        <Link to={`/products/${_id}`}>
+          <img
+            src={images_link[0]}
+            alt="Card Image"
+            className="w-full h-64 object-cover"
+          />
+        </Link>
         {/* hover icons (add to cart, add to wishlist, show details) */}
         {isHovered && (
           <div className="absolute flex -my-16 ps-24 gap-3 ">
@@ -40,9 +43,25 @@ const Card = ({ product }) => {
       </div>
 
       <div className="p-4">
-        <h3 className="text-lg font-bold text-black ">{product_name}</h3>
-        <p className="text-sm font-bold text-black my-2">{short_description}</p>
-        <p className="text-sm font-bold text-green-800">$ {price}</p>
+        <Link to={`/products/${_id}`}>
+          <h3 className="text-lg font-bold text-black ">{product_name}</h3>
+        </Link>
+        <Link to={`/products/${_id}`}>
+          <p className="text-sm font-bold text-black my-2">
+            {short_description}
+          </p>
+        </Link>
+        <div className="flex justify-between ">
+          <p className="font-bold text-orange-900">$ {price}</p>
+          {/* <button className="btn btn-neutral"> */}
+          <Link
+            className="font-bold p-1 rounded-md border border-spacing-2"
+            to={`/products/${_id}`}
+          >
+            Show more{" "}
+          </Link>
+          {/* </button> */}
+        </div>
       </div>
     </div>
   );

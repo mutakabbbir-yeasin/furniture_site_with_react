@@ -1,24 +1,32 @@
+import { useEffect, useState } from "react";
 import Title from "../../Shared/Title";
-import products from "../../../public/products.json";
 import Card from "../../Shared/Card";
 import { Link } from "react-router-dom";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 
 AOS.init({
-  offset: 300, // offset (in px) from the original trigger point
-  // delay: 500, // values from 0 to 3000, with step 50ms
+  offset: 400,
   duration: 1000,
 });
 
 const TopPicksProduct = () => {
+  const [products, setProducts] = useState([]);
+  // console.log(typeof products);
+
+  useEffect(() => {
+    fetch(
+      "https://api.json-generator.com/templates/g1IZOSMqxKte/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke"
+    )
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []); // Add an empty dependency array to useEffect to run only once on initial render
+
   return (
     <div
       className="my-16 "
       data-aos="slide-up"
-      // data-aos-delay="500"
-      data-aos-offset="300"
+      data-aos-offset="400"
       data-aos-duration="1000"
     >
       <Title
@@ -29,9 +37,9 @@ const TopPicksProduct = () => {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-16">
-        {products.slice(0, 9).map((product) => {
-          return <Card key={product._id} product={product} />;
-        })}
+        {products.slice(0, 9).map((product) => (
+          <Card key={product._id} product={product} />
+        ))}
       </div>
       <div className="text-center">
         <Link to="/products" className="btn btn-neutral px-8">

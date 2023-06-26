@@ -1,8 +1,9 @@
 import { Carousel } from "react-responsive-carousel";
-import brands from "../../../public/brands.json";
+// import brands from "../../../public/brands.json";
 import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { useEffect, useState } from "react";
 // ..
 
 AOS.init({
@@ -12,8 +13,16 @@ AOS.init({
 });
 
 const Brands = () => {
+  const [brands, setBrands] = useState([]);
+  useEffect(() => {
+    fetch(
+      "https://api.json-generator.com/templates/TqL6L1UR00Kp/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke"
+    )
+      .then((res) => res.json())
+      .then((data) => setBrands(data));
+  }, []);
   const brandSets = [];
-  // console.log(brands);
+  // console.log(brands.length);
   for (let i = 0; i < brands.length; i += 5) {
     brandSets.push(brands.slice(i, i + 5));
   }

@@ -16,8 +16,6 @@ Steps to follow:
 
 Done
 
-
-
 url: https://api.json-generator.com/templates/wpdVwhRGKHF0/data
 
 token: xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke
@@ -25,5 +23,11 @@ token: xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke
 add (?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke) next to the url
 
 
+blog.json er api link: 
+https://api.json-generator.com/templates/wpdVwhRGKHF0/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke
 
-final link: https://api.json-generator.com/templates/wpdVwhRGKHF0/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke
+brands.json file er api link:
+https://api.json-generator.com/templates/TqL6L1UR00Kp/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke
+
+product.json er api link:
+https://api.json-generator.com/templates/g1IZOSMqxKte/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke

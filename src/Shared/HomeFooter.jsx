@@ -3,12 +3,11 @@ import logo from "../assets/AllPics/logo.jpg";
 import { FaFacebookF, FaPinterest } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 
 AOS.init({
-  offset: 300, // offset (in px) from the original trigger point
-  delay: 500, // values from 0 to 3000, with step 50ms
+  offset: 300,
+  delay: 500,
   duration: 1000,
 });
 
@@ -16,7 +15,7 @@ const HomeFooter = () => {
   return (
     <>
       <div
-        className="flex items-center justify-center my-16 "
+        className="flex items-center justify-center mt-16 "
         data-aos="slide-up"
         data-aos-delay="500"
         data-aos-offset="300"

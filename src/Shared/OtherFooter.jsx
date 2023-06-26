@@ -15,7 +15,7 @@ AOS.init({
 const OtherFooter = () => {
   return (
     <div
-      className="flex items-center justify-center my-16 "
+      className="flex items-center justify-center mt-16 "
       data-aos="slide-up"
       data-aos-delay="500"
       data-aos-offset="300"
