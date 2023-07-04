@@ -34,7 +34,7 @@ const Card = ({ product }) => {
               </Link>
             </div>
             <div className="bg-slate-200 p-3 rounded-lg">
-              <Link to="/">
+              <Link to={`/products/${_id}`}>
                 <GrView className="w-6 h-6 " />
               </Link>
             </div>
