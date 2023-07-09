@@ -44,9 +44,9 @@ const Brands = () => {
         dynamicHeight={false}
         className="my-carousel mt-16" // Add any custom CSS classes here
       >
-        {brandSets.map((brandSet, index) => (
-          <div key={index} className="flex justify-center">
-            {brandSet.map((brand) => (
+        {brandSets?.map((brandSet, index) => (
+          <div key={index} className="flex sm:inline-flex ">
+            {brandSet?.map((brand) => (
               <div key={brand.name} className="w-1/4 px-4">
                 <img
                   src={brand.logoLink}

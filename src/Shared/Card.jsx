@@ -2,31 +2,43 @@ import { useState } from "react";
 import { AiFillHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { GrView } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import useAddToCart from "../hook/useAddToCart";
 
 const Card = ({ product }) => {
+  // console.log(product);
   const { _id, images_link, product_name, short_description, price } = product;
-  // console.log(_id);
+
+  const { handleAddToCart, loading } = useAddToCart();
+
   const [isHovered, setIsHovered] = useState(false);
   const handleHover = () => {
     setIsHovered(true);
   };
+
   return (
-    <div className="bg-white mx-auto rounded-lg shadow-md overflow-hidden w-[400px] h-[400px]">
+    <div className="bg-white mx-auto rounded-lg shadow-md overflow-hidden w-full sm:w-[400px] object-cover">
       <div onMouseOver={handleHover} onMouseOut={() => setIsHovered(false)}>
         <Link to={`/products/${_id}`}>
           <img
             src={images_link[0]}
             alt="Card Image"
-            className="w-full h-64 object-cover"
+            className="w-full h-[200px] sm:h-[300px]  object-fill"
           />
         </Link>
         {/* hover icons (add to cart, add to wishlist, show details) */}
         {isHovered && (
           <div className="absolute flex -my-16 ps-24 gap-3 ">
-            <div className="bg-slate-200 p-3 rounded-lg">
-              <Link to="/">
+            <div
+              className={`${
+                loading ? "bg-slate-400" : "bg-slate-200"
+              } p-3 rounded-lg`}
+            >
+              <button
+                disabled={loading}
+                onClick={() => handleAddToCart(product)}
+              >
                 <AiOutlineShoppingCart className="w-6 h-6" />
-              </Link>
+              </button>
             </div>
             <div className="bg-slate-200 p-3 rounded-lg">
               <Link to="/">

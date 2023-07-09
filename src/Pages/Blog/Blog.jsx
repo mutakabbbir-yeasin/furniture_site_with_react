@@ -19,9 +19,7 @@ const Blog = ({ homeBlog }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     setIsLoading(true);
-    fetch(
-      "https://api.json-generator.com/templates/wpdVwhRGKHF0/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke"
-    )
+    fetch("http://localhost:5000/blog")
       .then((res) => res.json())
       .then((data) => setBlog(data));
 

@@ -15,9 +15,7 @@ const TopPicksProduct = () => {
   // console.log(typeof products);
 
   useEffect(() => {
-    fetch(
-      "https://api.json-generator.com/templates/g1IZOSMqxKte/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke"
-    )
+    fetch("http://localhost:5000/product")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []); // Add an empty dependency array to useEffect to run only once on initial render

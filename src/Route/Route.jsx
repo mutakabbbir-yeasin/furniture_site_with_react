@@ -9,6 +9,9 @@ import ProductDetails from "../Pages/Products/ProductDetails";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
+import ShowCartProduct from "../Pages/showCartProduct/ShowCartProduct";
+import Dashboard from "../Layout/Dashboard";
+import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +46,14 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      // {
+      //   path: "/cartdetails",
+      //   element: (
+      //     <PrivateRoute>
+      //       <ShowCartProduct />
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
         path: "/blog",
         element: <Blog />,
@@ -55,10 +66,29 @@ export const router = createBrowserRouter([
             <ViewBlogDetails />
           </PrivateRoute>
         ),
-        // loader: ({ params }) =>
-        //   fetch(
-        //     `https://api.json-generator.com/templates/wpdVwhRGKHF0/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke/blog/${params.id}`
-        // ),
+      },
+    ],
+  },
+
+  {
+    path: "dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "mycart",
+        element: (
+          <PrivateRoute>
+            <MyCart />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "cartdetails",
+        element: (
+          <PrivateRoute>
+            <ShowCartProduct />
+          </PrivateRoute>
+        ),
       },
     ],
   },

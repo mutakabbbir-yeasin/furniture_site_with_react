@@ -1,7 +1,6 @@
 import Blog from "../Blog/Blog";
-// import ProductDetails from "../Products/ProductDetails";
 import Banner from "./Banner";
-import Brands from "./Brands";
+// import Brands from "./Brands";
 import ProductHighlight from "./ProductHighlight";
 import TopPicksProduct from "./TopPicksProduct";
 
@@ -10,10 +9,9 @@ const Home = () => {
     <>
       <div className="px-8">
         <Banner />
-        {/* <ProductDetails /> */}
         <ProductHighlight />
         <TopPicksProduct />
-        <Brands />
+        {/* <Brands /> */}
         <Blog homeBlog={true} />
       </div>
     </>

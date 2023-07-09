@@ -97,8 +97,8 @@ const OtherFooter = () => {
             {" "}
             © 2023 - Ecommerce software by PrestaShop™
           </div>
-          <div className="pages">
-            <ul tabIndex={0} className="flex   gap-5 ">
+          {/* <div className="pages">
+            <ul tabIndex={0} className="grid   gap-5 ">
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -115,7 +115,7 @@ const OtherFooter = () => {
                 <Link>Pages</Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

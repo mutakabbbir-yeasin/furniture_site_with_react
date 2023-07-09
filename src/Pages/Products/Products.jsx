@@ -4,25 +4,29 @@ import Card from "../../Shared/Card";
 import ProductSkeleton from "../Products/ProductSkeleton";
 import { useEffect } from "react";
 import { useState } from "react";
+import axios from "axios";
 // import TopPicksProduct from "../Home/TopPicksProduct";
 
 const Products = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProduct] = useState([]);
 
+  const getProduct = async () => {
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`http://localhost:5000/product`);
+      console.log(response);
+      setProduct(response?.data);
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      setIsLoading(false);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    setIsLoading(true);
-
-    fetch(
-      "https://api.json-generator.com/templates/g1IZOSMqxKte/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke"
-    )
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
-
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
+    getProduct();
   }, []);
 
   return (

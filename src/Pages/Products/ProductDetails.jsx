@@ -22,30 +22,19 @@ import {
 import { Carousel } from "react-responsive-carousel";
 import { useEffect, useState } from "react";
 import ProductSkeleton from "./ProductSkeleton";
+import useAddToCart from "../../hook/useAddToCart";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const { handleAddToCart } = useAddToCart();
 
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProduct] = useState([]);
+  const [productQuantity, setProductQuantity] = useState(1);
 
-  const singleProduct = products.find((item) => item._id * 1 === id * 1);
-  console.log(singleProduct);
+  const singleProduct = products?.find((item) => item._id * 1 === id * 1);
+  //console.log(singleProduct);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    setIsLoading(true);
-
-    fetch(
-      "https://api.json-generator.com/templates/g1IZOSMqxKte/data?access_token=xa5w6emfbnypcahxuu7ex7n0c4hk9i1uhn6gi5ke"
-    )
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
-
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
   const {
     available,
     brand_name,
@@ -58,6 +47,30 @@ const ProductDetails = () => {
     tags,
     reference,
   } = singleProduct || {};
+
+  const handleIncrement = () => {
+    setProductQuantity((prev) => prev + 1);
+  };
+
+  const handleDecrement = () => {
+    if (productQuantity > 1) {
+      setProductQuantity((prev) => prev - 1);
+    }
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setIsLoading(true);
+
+    fetch("http://localhost:5000/product")
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
       {isLoading && <ProductSkeleton />}
@@ -106,23 +119,31 @@ const ProductDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="divider divide-dotted"></div>
+            <div className="divider "></div>
             {/* add to cart */}
             <div className="flex gap-5">
-              <input
-                type="number"
-                name="number"
-                id=""
-                className="w-20 text-center rounded-md border border-spacing-2 hover:border-orange-900 transition duration-300 ease-in-out"
-                onInput={(e) => {
-                  const currentValue = parseInt(e.target.value); // Get the current value
-                  if (currentValue < 0) {
-                    e.target.value = 0; // Set the value to 0 if it's negative
-                  }
-                }}
-              />
+              <div className="flex">
+                <button className="bg-base-300 px-2" onClick={handleDecrement}>
+                  -
+                </button>
+                <p className="w-12 mx-2 border border-spacing-2 p-3">
+                  {productQuantity}
+                </p>
 
-              <button className="btn bg-orange-900 text-white p-3 rounded-full hover:border-orange-900 hover:text-orange-900">
+                <button className="bg-base-300 px-2" onClick={handleIncrement}>
+                  +
+                </button>
+              </div>
+
+              <button
+                onClick={() =>
+                  handleAddToCart({
+                    ...singleProduct,
+                    quantity: productQuantity,
+                  })
+                }
+                className="btn bg-orange-900 text-white p-3 rounded-full hover:border-orange-900 hover:text-orange-900"
+              >
                 <AiOutlineShoppingCart className="h-6 w-6" /> Add to cart
               </button>
               <button className="btn text-center border border-spacing-2 rounded-md hover:border-orange-900 transition duration-300 ease-in-out">

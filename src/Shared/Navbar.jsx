@@ -5,9 +5,12 @@ import { BsPerson } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import useCart from "../hook/useCart";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [cart] = useCart();
+  console.log(cart);
 
   const handleLogOut = () => {
     logOut()
@@ -15,14 +18,14 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="navbar navbar_style sticky top-0 z-10">
-      <div className="navbar-start">
+    <div className="navbar navbar_style  sticky top-0 z-10">
+      <div className="navbar-start grid grid-cols-3">
         {/* Dropdown menu start */}
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-8 w-8 text-[#CD8F5C]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -58,15 +61,16 @@ const Navbar = () => {
         </div>
         {/* Dropdown menu end */}
       </div>
+      {/* logo */}
       <div className="navbar-center">
-        <Link className="btn btn-ghost normal-case text-xl">
-          <img src={logo} alt="logo" />
+        <Link to="/">
+          <img className="w-24 h-7" src={logo} alt="logo" />
         </Link>
       </div>
       {/* Right side icons starts */}
       <div className="navbar-end">
         {/* Search icon */}
-        <button className="btn btn-ghost btn-circle">
+        {/* <button className="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -81,48 +85,71 @@ const Navbar = () => {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
-        </button>
+        </button> */}
         {user ? (
           <>
-            <span>{user?.displayName}</span>
-          </>
-        ) : (
-          ""
-        )}
-        {/* user login, signup */}
-        <button type="button" className="dropdown">
-          <BsPerson className="h-6 w-6" />
-
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-40 gap-2 -ms-14"
-          >
-            {user ? (
-              <>
+            <button type="button" className="dropdown">
+              <img
+                className="h-10 w-10 rounded-full mx-2"
+                src={user?.photoURL}
+                alt=""
+              />
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-40 gap-2 -ms-14"
+              >
+                <li>
+                  <p>{user?.displayName}</p>
+                </li>
                 <li>
                   <Link onClick={handleLogOut}>Logout</Link>
-                </li>{" "}
-              </>
-            ) : (
-              <>
-                <li>
+                </li>
+                {/* <li>
                   <Link to="/login">Login</Link>
-                </li>
-                <li>
-                  <Link to="/signup">Sign Up</Link>
-                </li>
-              </>
-            )}
-          </ul>
-        </button>
+                </li> */}
+              </ul>
+            </button>
+          </>
+        ) : (
+          <>
+            <button type="button" className="dropdown">
+              <BsPerson className="h-6 w-6" />
+
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-40 gap-2 -ms-14"
+              >
+                {user ? (
+                  <>
+                    <li>
+                      <Link onClick={handleLogOut}>Logout</Link>
+                    </li>{" "}
+                  </>
+                ) : (
+                  <>
+                    <li>
+                      <Link to="/login">Login</Link>
+                    </li>
+                    <li>
+                      <Link to="/signup">Sign Up</Link>
+                    </li>
+                  </>
+                )}
+              </ul>
+            </button>
+          </>
+        )}
         {/* cart icon */}
-        <button className="btn btn-ghost btn-circle">
-          <div className="indicator">
-            <AiOutlineShoppingCart className="h-6 w-6" />
-            <span className="badge badge-xs badge-primary indicator-item">
-              100
-            </span>
-          </div>
+        <button className="btn btn-ghost btn-circle ">
+          {/* <Link to="/cartdetails"> */}
+          <Link to="dashboard/cartdetails">
+            <div className="indicator">
+              <AiOutlineShoppingCart className="h-8 w-8" />
+              <span className="badge badge-xs bg-[#CD8F5C] p-2 text-white indicator-item">
+                {cart?.length || 0}
+              </span>
+            </div>
+          </Link>
         </button>
       </div>
       {/* Right side icons ends */}

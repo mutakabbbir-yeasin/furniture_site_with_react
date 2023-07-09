@@ -44,53 +44,71 @@ const ViewBlogDetails = () => {
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-5">
           {title}
         </h5>
-        <div className="flex">
-          <div className="flex">
-            <SlCalender />
-            <p className="-mt-1 px-3">{date} </p>
-            <p className="-mt-1 pl-4 pr-2">||</p>
+        <div className="  sm:grid md:flex">
+          <div>
+            <div className="flex">
+              <SlCalender />
+              <p className="-mt-1 px-3">{date} </p>
+              <p className="-mt-1 pl-4 pr-2 hidden sm:hidden md:flex">||</p>
+            </div>
           </div>
-          <div className="flex">
-            <BsPerson />
-            <p className="-mt-1 px-3">{author_name} </p>
-            <p className="-mt-1 pl-4 pr-2">||</p>
+          <div>
+            <div className="flex">
+              <BsPerson />
+              <p className="-mt-1 px-3">{author_name} </p>
+              <p className="-mt-1 pl-4 pr-2 hidden sm:hidden md:flex">||</p>
+            </div>
           </div>
-          <div className="flex">
-            <MdOutlineCategory />
-            <p className="-mt-1 px-3">{category} </p>
-            <p className="-mt-1 pl-4 pr-2">||</p>
+          <div>
+            <div className="flex">
+              <MdOutlineCategory />
+              <p className="-mt-1 px-3">{category} </p>
+              <p className="-mt-1 pl-4 pr-2 hidden sm:hidden md:flex">||</p>
+            </div>
           </div>
-          <div className="flex">
-            <AiFillHeart />
-            <p className="-mt-1 px-3">
-              {likes}{" "}
-              {likes * 1 > 1 ? "likes" : likes * 1 === 1 ? "like" : "0 likes"}{" "}
-            </p>
-            <p className="-mt-1 pl-4 pr-2">||</p>
+          <div>
+            <div className="flex">
+              <AiFillHeart />
+              <p className="-mt-1 px-3">
+                {likes}{" "}
+                {likes * 1 > 1 ? "likes" : likes * 1 === 1 ? "like" : "0 likes"}{" "}
+              </p>
+              <p className="-mt-1 pl-4 pr-2 hidden sm:hidden md:flex">||</p>
+            </div>
           </div>
-          <div className="flex">
-            <MdOutlineCategory />
-            <p className="-mt-1 px-3">{category} </p>
-            <p className="-mt-1 pl-4 pr-2">||</p>
+          <div>
+            <div className="flex">
+              <MdOutlineCategory />
+              <p className="-mt-1 px-3">{category} </p>
+              <p className="-mt-1 pl-4 pr-2 hidden sm:hidden md:flex">||</p>
+            </div>
           </div>
-          <div className="flex">
-            <AiFillEye />
-            <p className="-mt-1 px-3">
-              {views}
-              {views * 1 > 1 ? " views" : views * 1 === 1 ? " view" : "0 views"}
-            </p>
-            <p className="-mt-1 pl-4 pr-2 ">||</p>
+          <div>
+            <div className="flex">
+              <AiFillEye />
+              <p className="-mt-1 px-3">
+                {views}
+                {views * 1 > 1
+                  ? " views"
+                  : views * 1 === 1
+                  ? " view"
+                  : "0 views"}
+              </p>
+              <p className="-mt-1 pl-4 pr-2 hidden sm:hidden md:flex">||</p>
+            </div>
           </div>
-          <div className="flex">
-            <BiCommentDetail />
-            <p className="-mt-1 px-3">
-              {comment}
-              {comment * 1 > 1
-                ? " comments"
-                : comment * 1 === 1
-                ? " comment"
-                : "0 comment"}
-            </p>
+          <div>
+            <div className="flex">
+              <BiCommentDetail />
+              <p className="-mt-1 px-3">
+                {comment}
+                {comment * 1 > 1
+                  ? " comments"
+                  : comment * 1 === 1
+                  ? " comment"
+                  : "0 comment"}
+              </p>
+            </div>
           </div>
         </div>
         <img className="mx-auto my-16" src={image_link} alt="" />
