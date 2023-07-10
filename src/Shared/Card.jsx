@@ -35,7 +35,7 @@ const Card = ({ product }) => {
             >
               <button
                 disabled={loading}
-                onClick={() => handleAddToCart(product)}
+                onClick={() => handleAddToCart({ ...product, quantity: 1 })}
               >
                 <AiOutlineShoppingCart className="w-6 h-6" />
               </button>
@@ -67,7 +67,7 @@ const Card = ({ product }) => {
           <p className="font-bold text-orange-900">$ {price}</p>
           {/* <button className="btn btn-neutral"> */}
           <Link
-            className="font-bold p-1 rounded-md border border-spacing-2"
+            className="font-bold px-3 py-1 rounded-md border border-spacing-2 bg-[#cd8f5c] text-white hover:bg-white hover:border-[#cd8f5c] hover:text-[#cd8f5c] "
             to={`/products/${_id}`}
           >
             Show more{" "}

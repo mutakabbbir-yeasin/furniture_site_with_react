@@ -38,6 +38,7 @@ const Blog = ({ homeBlog }) => {
           data-aos-duration="1000"
         >
           <Title
+            className="px-4 md:px-3"
             heading={"Our Blog"}
             subHeading={
               "Find a bright ideal to suit your taste with our great selection"
@@ -51,7 +52,10 @@ const Blog = ({ homeBlog }) => {
                 })}
               </div>
               <div className="text-center my-10">
-                <Link to="/blog" className="btn btn-neutral ">
+                <Link
+                  to="/blog"
+                  className="btn bg-[#cd8f5c] text-white hover:bg-white hover:border-[#cd8f5c] hover:text-[#cd8f5c]  "
+                >
                   Show More Blogs
                 </Link>
               </div>

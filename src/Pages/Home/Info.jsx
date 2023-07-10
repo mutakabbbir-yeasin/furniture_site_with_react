@@ -14,7 +14,7 @@ AOS.init({
 const Info = () => {
   return (
     <div
-      className="flex items-center justify-center my-16 "
+      className="flex items-center justify-center text-white bg-[#cd8f5c] my-16 "
       data-aos="slide-up"
       data-aos-delay="500"
       data-aos-offset="300"
@@ -38,7 +38,7 @@ const Info = () => {
             <div>
               <h2 className="text-3xl font-bold">Free Delivery</h2>
               <p className="mt-2">
-                For all oders over $50, consectetur adipim scing elit.
+                For all orders over $50, consectetur adipim scing elit.
               </p>
             </div>
           </div>

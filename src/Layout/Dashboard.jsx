@@ -54,7 +54,7 @@ const Dashboard = () => {
               My Cart
             </NavLink>
           </li>
-          <div className="divider"></div>
+          <div className="divider divide-emerald-50"></div>
 
           <li>
             <NavLink to="/dashboard/home">

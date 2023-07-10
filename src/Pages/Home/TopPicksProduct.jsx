@@ -40,7 +40,10 @@ const TopPicksProduct = () => {
         ))}
       </div>
       <div className="text-center">
-        <Link to="/products" className="btn btn-neutral px-8">
+        <Link
+          to="/products"
+          className="btn bg-[#cd8f5c] text-white hover:bg-white hover:border-[#cd8f5c] hover:text-[#cd8f5c]  px-8"
+        >
           Show more
         </Link>
       </div>

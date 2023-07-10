@@ -34,6 +34,7 @@ const Products = () => {
       {isLoading && <ProductSkeleton />}
 
       <Title
+        className="px-4 md:px-8"
         heading={"Our Products"}
         subHeading={
           "Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights."

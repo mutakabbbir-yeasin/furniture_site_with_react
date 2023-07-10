@@ -63,7 +63,7 @@ const BlogCard = ({ blog }) => {
           </div>
           <div>
             {/* to={`/blog/${id}`} */}
-            <Link className="btn btn-neutral ">
+            <Link className="btn  bg-[#cd8f5c] text-white hover:bg-white hover:border-[#cd8f5c] hover:text-[#cd8f5c] ">
               Read more
               <BsArrowRight />
             </Link>

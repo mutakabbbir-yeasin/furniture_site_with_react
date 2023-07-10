@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.info {
+/* .info {
   background-color: #eaf1f5;
-}
+} */
 
 .drawer-side a.active {
   color: white;
