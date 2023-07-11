@@ -5,18 +5,24 @@ import { BsPerson } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { CartContext } from "../providers/CartProvider";
+import { useEffect } from "react";
 import useCart from "../hook/useCart";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [cart] = useCart();
-  console.log(cart);
+  const { cartDataList } = useContext(CartContext);
+  const { getCartListData } = useCart();
 
   const handleLogOut = () => {
     logOut()
       .then(() => {})
       .catch((error) => console.log(error));
   };
+
+  useEffect(() => {
+    getCartListData();
+  }, []);
   return (
     <div className="navbar navbar_style  sticky top-0 z-10">
       <div className="navbar-start grid grid-cols-3">
@@ -146,7 +152,7 @@ const Navbar = () => {
             <div className="indicator">
               <AiOutlineShoppingCart className="h-8 w-8" />
               <span className="badge badge-xs bg-[#CD8F5C] p-2 text-white indicator-item">
-                {cart?.length || 0}
+                {cartDataList?.length || 0}
               </span>
             </div>
           </Link>

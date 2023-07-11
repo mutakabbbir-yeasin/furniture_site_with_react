@@ -1,20 +1,33 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import { useQuery } from "@tanstack/react-query";
+
+import { CartContext } from "../providers/CartProvider";
+import { useState } from "react";
+import axios from "axios";
 
 const useCart = () => {
   const { user } = useContext(AuthContext);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState();
+  const { setCartDataList } = useContext(CartContext);
 
-  const { refetch, data: cart = [] } = useQuery({
-    queryKey: ["cart", user?.email],
-    queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/cart?email=${user.email}`);
+  const getCartListData = async () => {
+    try {
+      setLoading(true);
+      const { data } = await axios.get(
+        `http://localhost:5000/cart?email=${user?.email}`
+      );
+      if (data) {
+        setCartDataList(data);
+        setLoading(false);
+      }
+    } catch (error) {
+      setLoading(false);
+      setError(error);
+    }
+  };
 
-      return res.json();
-    },
-  });
-  //   console.log(cart);
-  return [cart, refetch];
+  return { loading, error, getCartListData };
 };
 
 export default useCart;

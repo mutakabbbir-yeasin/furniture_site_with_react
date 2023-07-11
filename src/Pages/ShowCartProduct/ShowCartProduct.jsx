@@ -3,24 +3,26 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet";
 import ProductSkeleton from "../Products/ProductSkeleton";
 import { Link } from "react-router-dom";
+import { AiOutlineDelete, AiOutlineHeart } from "react-icons/ai";
+import Swal from "sweetalert2";
+import { CartContext } from "../../providers/CartProvider";
+import useCart from "../../hook/useCart";
+// import useCart from "../../hook/useCart";
 
 const ShowCartProduct = () => {
   const { user } = useContext(AuthContext);
-  const [isLoading, setIsLoading] = useState(false);
-  const [carts, setCart] = useState([]);
+
+  // const [carts, setCarts] = useState([]);
   const [selectedProducts, setSelectedProducts] = useState([]);
+  const { cartDataList, setCartDataList } = useContext(CartContext);
 
-  useEffect(() => {
-    setIsLoading(true);
+  const { getCartListData, loading } = useCart();
+  // const [, refetch] = useCart();
 
-    fetch(`http://localhost:5000/cart?email=${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => setCart(data))
-      .finally(() => setIsLoading(false));
-  }, [user]);
-
+  // delete a product from shopping cart
+  console.log("cartDataList===>", cartDataList);
   const handleDecreaseQuantity = (cartId) => {
-    setCart((prevCarts) =>
+    setCartDataList((prevCarts) =>
       prevCarts.map((cart) =>
         cart._id === cartId && cart.quantity > 1
           ? { ...cart, quantity: cart.quantity - 1 }
@@ -31,7 +33,7 @@ const ShowCartProduct = () => {
   };
 
   const handleIncreaseQuantity = (cartId) => {
-    setCart((prevCarts) =>
+    setCartDataList((prevCarts) =>
       prevCarts.map((cart) =>
         cart._id === cartId ? { ...cart, quantity: cart.quantity + 1 } : cart
       )
@@ -41,7 +43,7 @@ const ShowCartProduct = () => {
 
   const handleProductSelect = (cartId, checked) => {
     if (checked) {
-      const selectedCart = carts.find((cart) => cart._id === cartId);
+      const selectedCart = cartDataList?.find((cart) => cart._id === cartId);
       setSelectedProducts((prevSelectedProducts) => [
         selectedCart,
         ...prevSelectedProducts,
@@ -69,6 +71,53 @@ const ShowCartProduct = () => {
     0
   );
 
+  // const getCartData = () => {
+  //   fetch(`http://localhost:5000/cart?email=${user?.email}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setCartDataList(data))
+  //     .finally(() => setIsLoading(false));
+  // };
+
+  const handleDelete = (cart) => {
+    // console.log(cart);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result?.isConfirmed) {
+        fetch(`http://localhost:5000/cart/${cart._id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data?.deletedCount > 0) {
+              getCartListData();
+              console.log("Inner Function");
+              Swal.fire({
+                title: `${cart?.product_name}`,
+                text: "Deleted Successfully",
+                icon: "success",
+                showCancelButton: false,
+                confirmButtonColor: "#3085d6",
+                confirmButtonText: "OK !",
+              });
+            }
+          });
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (user?.email) {
+      getCartListData();
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -77,13 +126,13 @@ const ShowCartProduct = () => {
       <h2 className="text-center text-2xl font-bold mt-10 text-[#cd8f5c]">
         My Cart information
       </h2>
-      {isLoading ? (
+      {loading ? (
         <ProductSkeleton />
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-10 ">
           {/* left product details */}
           <div className="lg:col-span-2 ">
-            {carts?.map((cart) => (
+            {cartDataList?.map((cart) => (
               <div
                 key={cart._id}
                 className="card card-side bg-base-100 border border-[#cd8f5c] border-spacing-2 my-3 p-2 "
@@ -113,9 +162,9 @@ const ShowCartProduct = () => {
                     {cart?.short_description}
                   </p>
                   <p>Available: {cart?.available} item(s)</p>
-                  {/* small device show */}
-                  <div className="flex gap-3">
-                    <div className="flex h-7 mt-2 lg:hidden ">
+                  {/* price & quantity are visible small device and hidden on large device */}
+                  <div className="grid lg:hidden mt-2">
+                    <div className="flex h-7 mt-2 ">
                       <button
                         className="bg-base-300 border px-1 hover:border-[#cd8f5c] hover:text-[#cd8f5c]"
                         onClick={() => handleDecreaseQuantity(cart._id)}
@@ -134,7 +183,7 @@ const ShowCartProduct = () => {
                       </button>
                     </div>
                     <div>
-                      <p className="font-bold lg:hidden flex mt-2">
+                      <p className="font-bold mt-3">
                         ${" "}
                         {cart?.quantity > 1
                           ? cart?.quantity * cart?.price
@@ -160,7 +209,7 @@ const ShowCartProduct = () => {
                     >
                       -
                     </button>
-                    <p className="w-12 mx-2 border border-spacing-2 text-center pb-1 border hover:border-[#cd8f5c]">
+                    <p className="w-12 mx-2  border-spacing-2 text-center pb-1 border hover:border-[#cd8f5c]">
                       {cart?.quantity}
                     </p>
                     <button
@@ -168,6 +217,15 @@ const ShowCartProduct = () => {
                       onClick={() => handleIncreaseQuantity(cart._id)}
                     >
                       +
+                    </button>
+                  </div>
+                  {/* delete and wishlist icon */}
+                  <div className="flex gap-3  justify-end mt-20">
+                    <button>
+                      <AiOutlineHeart className="h-6 w-6 hover:text-[#cd8f5c]" />
+                    </button>
+                    <button onClick={() => handleDelete(cart)}>
+                      <AiOutlineDelete className="h-6 w-6 hover:text-[#cd8f5c]" />
                     </button>
                   </div>
                 </div>

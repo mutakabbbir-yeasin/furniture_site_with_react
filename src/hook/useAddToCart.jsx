@@ -9,7 +9,7 @@ const useAddToCart = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { user } = useContext(AuthContext);
-  const [, refetch] = useCart();
+  const { getCartListData } = useCart();
   const [loading, setLoading] = useState(false);
 
   const handleAddToCart = (product) => {
@@ -57,7 +57,7 @@ const useAddToCart = () => {
               cancelButtonColor: "#d33",
             });
           } else {
-            refetch();
+            getCartListData();
             setLoading(false);
             Swal.fire({
               position: "top-end",

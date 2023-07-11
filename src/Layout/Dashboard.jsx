@@ -6,9 +6,13 @@ import {
 } from "react-icons/ai";
 import { NavLink, Outlet } from "react-router-dom";
 import "./../index.css";
+
+import { useContext } from "react";
+import { CartContext } from "../providers/CartProvider";
 // import logo from "../../src/assets/AllPics/logo.jpg";
 
 const Dashboard = () => {
+  const { cartDataList } = useContext(CartContext);
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -51,7 +55,7 @@ const Dashboard = () => {
           <li>
             <NavLink to="/dashboard/cartdetails">
               <FaShoppingCart />
-              My Cart
+              <p> My Cart ({cartDataList?.length || 0})</p>
             </NavLink>
           </li>
           <div className="divider divide-emerald-50"></div>
